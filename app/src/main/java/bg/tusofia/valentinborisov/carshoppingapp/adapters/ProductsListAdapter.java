@@ -1,10 +1,10 @@
-package bg.tusofia.valentinborisov.dipl.adapters;
+package bg.tusofia.valentinborisov.carshoppingapp.adapters;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import bg.tusofia.valentinborisov.dipl.R;
-import bg.tusofia.valentinborisov.dipl.responses.ProductsResponse;
+import bg.tusofia.valentinborisov.carshoppingapp.R;
+import bg.tusofia.valentinborisov.carshoppingapp.retrofit.responses.ProductsResponse;
 
 public class ProductsListAdapter extends ArrayAdapter<ProductsResponse> {
 
@@ -38,9 +38,11 @@ public class ProductsListAdapter extends ArrayAdapter<ProductsResponse> {
         Bitmap bmp = BitmapFactory.decodeByteArray(img,0, img.length);
         bmp = Bitmap.createScaledBitmap(bmp, 200, 200, false);
 
-        TextView txtTitle = (TextView) rowView.findViewById(R.id.textView);
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.imageView);
+        TextView txtTitle = rowView.findViewById(R.id.textViewItem);
+        TextView txtBrand = rowView.findViewById(R.id.textViewBrand);
+        ImageView imageView = rowView.findViewById(R.id.imageView);
         txtTitle.setText(products.get(position).getName());
+        txtBrand.setText(products.get(position).getBrand().getName());
         imageView.setImageBitmap(bmp);
 
         return rowView;

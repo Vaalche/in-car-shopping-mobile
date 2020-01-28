@@ -1,11 +1,10 @@
-package bg.tusofia.valentinborisov.dipl.clients;
+package bg.tusofia.valentinborisov.carshoppingapp.retrofit.clients;
 
-
-import org.json.JSONObject;
 
 import java.util.List;
 
-import bg.tusofia.valentinborisov.dipl.responses.ProductsResponse;
+import bg.tusofia.valentinborisov.carshoppingapp.retrofit.responses.Brand;
+import bg.tusofia.valentinborisov.carshoppingapp.retrofit.responses.ProductsResponse;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -14,6 +13,9 @@ import retrofit2.http.Query;
 import retrofit2.http.Url;
 
 public interface CarShoppingClient {
+
+    @GET("/getBrands")
+    Call<List<Brand>> getBrands();
 
     @GET("/getProductsByBrandName/{brandName}")
     Call<List<ProductsResponse>> getProductsByBrandName(@Path("brandName") String brandName);

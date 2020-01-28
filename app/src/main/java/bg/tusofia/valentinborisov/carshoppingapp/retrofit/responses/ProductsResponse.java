@@ -1,4 +1,4 @@
-package bg.tusofia.valentinborisov.dipl.responses;
+package bg.tusofia.valentinborisov.carshoppingapp.retrofit.responses;
 
 import lombok.Getter;
 import lombok.Setter;

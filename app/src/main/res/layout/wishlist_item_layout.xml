@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:descendantFocusability="blocksDescendants" >
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200px"
-        android:layout_height="200px" />
+        android:layout_height="200px"
+        />
 
     <LinearLayout
+        android:id="@+id/text_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/imageView">
 
         <TextView
             android:id="@+id/textViewItem"
@@ -27,4 +30,13 @@
             android:layout_height="wrap_content"
             android:text="TextView" />
     </LinearLayout>
-</LinearLayout>
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remove"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

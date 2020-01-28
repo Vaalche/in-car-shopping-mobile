@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toTopOf="@id/productsListView"
+        app:layout_constraintEnd_toStartOf="parent"
+        android:orientation="horizontal"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/brand_filter"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:focusedByDefault="false"
+            android:hint="Enter brand name"
+            android:dropDownAnchor="@id/brand_filter"
+            android:completionThreshold="1"
+            />
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:focusedByDefault="false"
+            android:hint="Enter brand name"
+            android:text="Search"
+            />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/productsListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_layout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

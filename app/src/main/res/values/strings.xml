@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Dipl</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_wishlist">Wishlist</string>
+    <string name="title_options_dialog">Choose an option</string>
 </resources>

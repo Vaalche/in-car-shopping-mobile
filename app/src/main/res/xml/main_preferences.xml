@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        android:title="Search Range"
+        android:summary="Change how far you search for a venue"
+        android:key="range"
+        android:persistent="true"
+        android:dialogTitle="@string/title_options_dialog"
+        app:iconSpaceReserved="false" />
+
+    <ListPreference
+        android:title="Search Interval"
+        android:summary="Change how frequent you search for a venue"
+        android:key="interval"
+        android:persistent="true"
+        android:dialogTitle="@string/title_options_dialog"
+        app:iconSpaceReserved="false" />
+
+</PreferenceScreen>
